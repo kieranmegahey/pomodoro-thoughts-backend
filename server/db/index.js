@@ -6,11 +6,11 @@ console.log(process.env.TESTING);
 console.log("test env");
 
 const pool = new pg.Pool({
-  user: "kumdgfstlkvksq",
-  host: "ec2-34-242-8-97.eu-west-1.compute.amazonaws.com",
-  database: "d1cphs6k1u9600",
-  password: "e17b622e7d77b57e2f2406919564cd648c7e3fa050c2ed09074ea3cf8a875748",
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
   ssl: { rejectUnauthorized: false },
 });
 
