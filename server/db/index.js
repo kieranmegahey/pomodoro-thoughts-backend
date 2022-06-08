@@ -1,16 +1,16 @@
 import pg from "pg";
-// import { db } from "../config.js";
+import * as config from "../config.js";
 
 console.log(process.env.DB_USER);
 console.log(process.env.TESTING);
 console.log("test env");
 
 const pool = new pg.Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  user: config.DB_USER,
+  host: config.DB_HOST,
+  database: config.DB_DATABASE,
+  password: config.DB_PASSWORD,
+  port: config.DB_PORT,
   ssl: { rejectUnauthorized: false },
 });
 
