@@ -5,7 +5,7 @@ import cors from "cors";
 // storing express function in a variable
 const app = express();
 // storing the specified port in a variable
-const PORT = process.env3000;
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
