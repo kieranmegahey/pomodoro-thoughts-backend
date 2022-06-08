@@ -1,0 +1,25 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "populateThoughtsTable": "node ./server/db/scripts/populateThoughtsTable.js",
+    "createThoughtsTable": "node ./server/db/scripts/createThoughtsTable.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
